@@ -1,33 +1,174 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model List<WebTuChon.Models.User>
+@{
+    ViewBag.Tilte = "Home";
 }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
-
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">User</h5>
     </div>
-</main>
+    <div class="card-body border-top">
+        <form class="needs-validation" novalidate>
+            <div class="row mb-3">
+                <label class="col-lg-3 col-form-label">Id:</label>
+                <div class="col-lg-9">
+                    <input type="number" id="Id" min="0" name="Id" required class="form-control" placeholder="Id">
+                </div>
+                <div class="invalid-feedback">Invalid Id must > 0</div>
+                <div class="valid-feedback">Valid</div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-lg-3 col-form-label">FullName:</label>
+                <div class="col-lg-9">
+                    <input type="text" id="FullName" required class="form-control" name="FullName" placeholder="FullName">
+                </div>
+                <div class="invalid-feedback">Invalid</div>
+                <div class="valid-feedback">Valid</div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-lg-3 col-form-label">BirthDay:</label>
+                <div class="col-lg-9">
+                    <input type="date" id="BirthDay" required class="form-control" name="BirthDay" placeholder="BirthDay">
+                </div>
+                <div class="invalid-feedback">Invalid</div>
+                <div class="valid-feedback">Valid</div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-lg-3 col-form-label">Country:</label>
+                <div class="col-lg-9">
+                    <select class="form-select" id="Country" name="Country" required>
+                        <option value="VN">Viet Nam</option>
+                        <option value="Korean">Han Quoc</option>
+                        <option value="USA">My</option>
+                    </select>
+                </div>
+                <div class="invalid-feedback">Invalid</div>
+                <div class="valid-feedback">Valid</div>
+            </div>
+            <div class="text-end">
+                <button type="button" id="Confirm" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal_theme_danger">Submit <i class="ph-play-circle ms-2"></i></button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- /basic layout -->
+
+<table class="table datatable-html">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>FullName</th>
+            <th>BirthDay</th>
+            <th>Country</th>
+            <th>Subject</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FullName</td>
+                <td>@item.BirthDay.ToShortDateString()</td>
+                <td>@item.Country</td>
+
+                <td>
+                    @foreach (var ct in item.Subject)
+                    {
+                        @(ct + ", ")
+                    }
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+@*Modal*@
+<div id="modal_theme_danger" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Information</h5>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+            <div class="modal-body">
+                <form action="~/Home/Create" method="post" class="needs-validation" novalidate>
+                    <div class="row mb-3">
+                        <label class="col-lg-3 col-form-label">Id:</label>
+                        <div class="col-lg-9">
+                            <input type="number" min="0" id="IdConfirm" name="Id" required class="form-control" placeholder="Id">
+                        </div>
+                        <div class="invalid-feedback">Invalid Id must > 0</div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-lg-3 col-form-label">FullName:</label>
+                        <div class="col-lg-9">
+                            <input type="text" required class="form-control" id="FullNameConfirm" name="FullName" placeholder="FullName">
+                        </div>
+                        <div class="invalid-feedback">Invalid</div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-lg-3 col-form-label">BirthDay:</label>
+                        <div class="col-lg-9">
+                            <input type="date" required class="form-control" id="BirthDayConfirm" name="BirthDay" placeholder="BirthDay">
+                        </div>
+                        <div class="invalid-feedback">Invalid</div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-form-label col-lg-3">Country: </label>
+                        <div class="col-lg-9">
+                            <select class="form-select" name="Country" id="CountryConfirm" required="">
+                                <option selected disabled value="">Please select</option>
+                                <option value="VN">Viet Nam</option>
+                                <option value="Korean">Han Quoc</option>
+                                <option value="USA">My</option>
+                            </select>
+                            <div class="invalid-feedback">Invalid feedback</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-form-label col-lg-3">Subject: </label>
+                        <div class="form-check-horizontal">
+                            <label class="form-check mb-2">
+                                <input type="checkbox" class="form-check-input" value="C#" name="Subject" required>
+                                <span class="form-check-label">C#</span>
+                                <div class="invalid-feedback">Invalid feedback</div>
+                            </label>
+                            <label class="form-check mb-2">
+                                <input type="checkbox" class="form-check-input" value="Java" name="Subject" required>
+                                <span class="form-check-label">Java</span>
+                                <div class="invalid-feedback">Invalid feedback</div>
+                            </label>
+                            <label class="form-check mb-2">
+                                <input type="checkbox" class="form-check-input" value="Kiem Thu Nang Cao" name="Subject" required>
+                                <span class="form-check-label">Kiem Thu Nang Cao</span>
+                                <div class="invalid-feedback">Invalid feedback</div>
+
+                            </label>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-primary">Submit form <i class="ph-paper-plane-tilt ms-2"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //ShowInfor len modal
+    $('#Confirm').click(function () {
+        var id = $("#Id").val();
+        var fullName = $("#FullName").val();
+        var birthDay = $("#BirthDay").val();
+        var country = $("#Country").val();
+
+
+        // Điền giá trị vào modal
+        $("#IdConfirm").val(id);
+        $("#FullNameConfirm").val(fullName);
+        $("#BirthDayConfirm").val(birthDay);
+        $("#CountryConfirm").val(country);
+    });
+</script>

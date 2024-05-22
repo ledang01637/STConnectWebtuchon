@@ -4,6 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!-- Global stylesheets -->
+    <link href="~/STScript/inter.css" rel="stylesheet" type="text/css">
+    <link href="~/STScript/styles.min.css" rel="stylesheet" type="text/css">
+    @*<link href="~/Scripts/all.css" id="stylesheet" rel="stylesheet" type="text/css">*@
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js"></script>
+    <!-- /global stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css">
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -18,8 +27,6 @@
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
             </div>
         </div>
@@ -28,10 +35,24 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Lê Đăng</p>
         </footer>
     </div>
 
+    <!-- Core JS files -->
+    <script src="~/STScript/components_modals.js"></script>
+    <script src="~/STScript/bootstrap.bundle.min.js"></script>
+    <!-- /core JS files -->
+    <!-- Theme JS files -->
+    <script src="~/STScript/jquery.min.js"></script>
+    <script src="~/STScript/bootbox.min.js"></script>
+    <script src="~/STScript/app.js"></script>
+    <script src="~/STScript/components_modals.js"></script>
+    <script src="~/STScript/form_validation_styles.js"></script>
+    <!-- /theme JS files -->
+    <!-- Icon JS files -->
+    <script src="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/index.min.js"></script>
+    <!-- /icon JS files -->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
