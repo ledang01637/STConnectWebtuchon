@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\FPT Poly\\STConnection\\STConnectWebTuChon\\WebTuChon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F438E5E-0C04-4D0B-BDED-6675DE3B800A}|WebTuChon\\WebTuChon.csproj|D:\\FPT Poly\\STConnection\\STConnectWebTuChon\\WebTuChon\\webtuchon\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9F438E5E-0C04-4D0B-BDED-6675DE3B800A}|WebTuChon\\WebTuChon.csproj|d:\\fpt poly\\stconnection\\stconnectwebtuchon\\webtuchon\\webtuchon\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9F438E5E-0C04-4D0B-BDED-6675DE3B800A}|WebTuChon\\WebTuChon.csproj|solutionrelative:webtuchon\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -11,11 +11,11 @@
       "RelativeMoniker": "D:0:0:{9F438E5E-0C04-4D0B-BDED-6675DE3B800A}|WebTuChon\\WebTuChon.csproj|solutionrelative:webtuchon\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F438E5E-0C04-4D0B-BDED-6675DE3B800A}|WebTuChon\\WebTuChon.csproj|d:\\fpt poly\\stconnection\\stconnectwebtuchon\\webtuchon\\webtuchon\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9F438E5E-0C04-4D0B-BDED-6675DE3B800A}|WebTuChon\\WebTuChon.csproj|D:\\FPT Poly\\STConnection\\STConnectWebTuChon\\WebTuChon\\webtuchon\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9F438E5E-0C04-4D0B-BDED-6675DE3B800A}|WebTuChon\\WebTuChon.csproj|solutionrelative:webtuchon\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F438E5E-0C04-4D0B-BDED-6675DE3B800A}|WebTuChon\\WebTuChon.csproj|d:\\fpt poly\\stconnection\\stconnectwebtuchon\\webtuchon\\webtuchon\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9F438E5E-0C04-4D0B-BDED-6675DE3B800A}|WebTuChon\\WebTuChon.csproj|D:\\FPT Poly\\STConnection\\STConnectWebTuChon\\WebTuChon\\webtuchon\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F438E5E-0C04-4D0B-BDED-6675DE3B800A}|WebTuChon\\WebTuChon.csproj|solutionrelative:webtuchon\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -56,10 +56,9 @@
               "RelativeDocumentMoniker": "WebTuChon\\Models\\User.cs",
               "ToolTip": "D:\\FPT Poly\\STConnection\\STConnectWebTuChon\\WebTuChon\\WebTuChon\\Models\\User.cs",
               "RelativeToolTip": "WebTuChon\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T02:54:36.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T02:54:36.469Z"
             },
             {
               "$type": "Document",
@@ -69,7 +68,7 @@
               "RelativeDocumentMoniker": "WebTuChon\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\FPT Poly\\STConnection\\STConnectWebTuChon\\WebTuChon\\WebTuChon\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "WebTuChon\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAAAH4AAAAvAAAA",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAwwF8AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-20T02:36:56.042Z",
               "EditorCaption": ""
@@ -82,10 +81,9 @@
               "RelativeDocumentMoniker": "WebTuChon\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\FPT Poly\\STConnection\\STConnectWebTuChon\\WebTuChon\\WebTuChon\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "WebTuChon\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADIAAAA2AAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADIAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-20T02:36:29.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T02:36:29.909Z"
             },
             {
               "$type": "Document",
@@ -95,10 +93,9 @@
               "RelativeDocumentMoniker": "WebTuChon\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\FPT Poly\\STConnection\\STConnectWebTuChon\\WebTuChon\\WebTuChon\\Controllers\\HomeController.cs",
               "RelativeToolTip": "WebTuChon\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwCgAAAAQAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAC4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T02:33:10.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T02:33:10.439Z"
             }
           ]
         },

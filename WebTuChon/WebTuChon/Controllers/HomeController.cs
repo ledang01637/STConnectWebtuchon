@@ -33,7 +33,7 @@ namespace WebTuChon.Controllers
             return View(_users);
         }
 
-        [HttpPost]
+		[HttpPost]
         public ActionResult Create(User user)
         {
             if(ModelState.IsValid)
